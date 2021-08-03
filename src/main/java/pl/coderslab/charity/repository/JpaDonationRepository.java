@@ -38,4 +38,9 @@ public class JpaDonationRepository implements DonationService {
     public void updateDonation(Donation donation) {
         repository.save(donation);
     }
+
+    @Override
+    public Integer getNumberOfBags() {
+        return repository.getNumberOfBags();
+    }
 }

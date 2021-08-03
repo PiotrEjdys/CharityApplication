@@ -4,7 +4,9 @@
 <section id="stats" class="stats">
     <div class="container container--85">
         <div class="stats--item">
-            <em>10</em>
+            <c:if test="${totalBags != 0}">
+            <em><c:out value="${totalBags}" default="0"/></em>
+            </c:if>
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
                 tempora!</p>
