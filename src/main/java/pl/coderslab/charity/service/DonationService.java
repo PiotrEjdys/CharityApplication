@@ -19,4 +19,6 @@ public interface DonationService {
     void updateDonation(Donation donation);
 
     Integer getNumberOfBags();
+
+    Integer getNumberOfDonations();
 }

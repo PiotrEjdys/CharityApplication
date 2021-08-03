@@ -26,7 +26,7 @@ public class Donation {
     @JoinTable(name = "categories_donations")
     private List<Category> categories;
     @OneToOne
-    @JoinColumn(name = "institution_id",unique = true)
+    @JoinColumn(name = "institution_id")
     private Institution institution;
     private String street;
     private String city;

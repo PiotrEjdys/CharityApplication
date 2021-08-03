@@ -25,8 +25,10 @@ public class HomeController {
     public String homeAction(Model model) {
         List<Institution> institutions = institutionRepository.getAllInstitutions();
         Integer numberOfBags = donationRepository.getNumberOfBags();
+        Integer numberOfDonations = donationRepository.getNumberOfDonations();
         model.addAttribute("totalBags",numberOfBags);
         model.addAttribute("institutions", institutions);
+        model.addAttribute("totalDonations",numberOfDonations);
         return "index";
     }
 }

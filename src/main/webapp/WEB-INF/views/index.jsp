@@ -13,7 +13,9 @@
         </div>
 
         <div class="stats--item">
-            <em>5</em>
+            <c:if test="${totalDonations != 0}">
+            <em><c:out value="${totalDonations}" default="0"/> </em>
+            </c:if>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>

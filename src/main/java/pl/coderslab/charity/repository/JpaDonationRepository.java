@@ -43,4 +43,10 @@ public class JpaDonationRepository implements DonationService {
     public Integer getNumberOfBags() {
         return repository.getNumberOfBags();
     }
+
+    @Override
+    public Integer getNumberOfDonations() {
+        return repository.getNumberOfDonations();
+    }
+
 }
