@@ -1,10 +1,11 @@
 package pl.coderslab.charity.repository;
 
+import org.springframework.stereotype.Service;
 import pl.coderslab.charity.model.Institution;
 import pl.coderslab.charity.service.InstitutionService;
 
 import java.util.List;
-
+@Service
 public class JpaInstitutionRepository implements InstitutionService {
 
     private final InstitutionRepository repository;

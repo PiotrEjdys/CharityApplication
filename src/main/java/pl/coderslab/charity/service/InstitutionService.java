@@ -5,7 +5,7 @@ import pl.coderslab.charity.model.Institution;
 
 import java.util.List;
 
-@Service
+
 public interface InstitutionService {
     List<Institution> getAllInstitutions();
 

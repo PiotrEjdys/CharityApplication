@@ -1,10 +1,11 @@
 package pl.coderslab.charity.repository;
 
+import org.springframework.stereotype.Service;
 import pl.coderslab.charity.model.Category;
 import pl.coderslab.charity.service.CategoryService;
 
 import java.util.List;
-
+@Service
 public class JpaCategoryRepository implements CategoryService {
 
     private final CategoryRepository repository;
