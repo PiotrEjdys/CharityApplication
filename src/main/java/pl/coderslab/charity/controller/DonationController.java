@@ -1,6 +1,7 @@
 package pl.coderslab.charity.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,6 +12,7 @@ import pl.coderslab.charity.repository.JpaCategoryRepository;
 import pl.coderslab.charity.repository.JpaDonationRepository;
 import pl.coderslab.charity.repository.JpaInstitutionRepository;
 
+import javax.validation.Valid;
 import java.util.List;
 
 @Controller
@@ -30,7 +32,10 @@ public class DonationController {
         return "form";
     }
     @PostMapping("/form")
-    public String postForm(Donation donation){
+    public String postForm(@Valid Donation donation, BindingResult result){
+        if (result.hasErrors()){
+            return "form";
+        }
         donationRepository.addDonation(donation);
         return "redirect:/formConfirmation";
     }

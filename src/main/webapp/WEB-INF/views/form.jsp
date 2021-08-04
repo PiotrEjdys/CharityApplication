@@ -33,7 +33,8 @@
 <%--              <label>--%>
 <%--              <span class="checkbox"></span>--%>
                 <form:checkboxes   path="categories"
-                                 items="${categories}" itemLabel="name" itemValue="id" id="category"/>
+                                 items="${categories}" itemLabel="name" itemValue="id" id="category"/><br>
+            <strong style="font-size: large"><form:errors path="categories"/> </strong>
 <%--                <span class="checkbox"></span>--%>
 <%--                <span class="description"--%>
 <%--                  >ubrania, które nadają się do ponownego użycia</span--%>
@@ -51,8 +52,8 @@
             <div class="form-group form-group--inline">
               <label>
                 Liczba 60l worków:
-                <form:input path="quantity" id="quantity"/>
-<%--                <input type="number" name="bags" step="1" min="1" />--%>
+                <form:input path="quantity" id="quantity"/><form:errors path="quantity"/>
+
               </label>
             </div>
 
@@ -78,10 +79,12 @@
 <%--                    Cel i misja: Pomoc dla osób nie posiadających miejsca--%>
 <%--                    zamieszkania--%>
 <%--                  </div>--%>
+                  <form:radiobuttons path="institution" items="${institutions}" itemLabel="name" itemValue="id"/> <br>
+            <strong style="font-size: large"><form:errors path="institution"/></strong>
 <%--                </span>--%>
 <%--              </label>--%>
 <%--            </div>--%>
-            <form:radiobuttons path="institution" items="${institutions}" itemLabel="name" itemValue="id"/>
+
             <div class="form-group form-group--buttons">
               <button type="button" class="btn prev-step">Wstecz</button>
               <button type="button" class="btn next-step">Dalej</button>
@@ -96,16 +99,17 @@
               <div class="form-section--column">
                 <h4>Adres odbioru</h4>
                 <div class="form-group form-group--inline">
-                  <label> Ulica <form:input path="street" id="street" /> </label>
+                  <label> Ulica <form:input path="street" id="street" />
+                    <form:errors path="street"/> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
-                  <label> Miasto <form:input path="city" id="city"/> </label>
+                  <label> Miasto <form:input path="city" id="city"/> <form:errors path="city"/> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
                   <label>
-                    Kod pocztowy <form:input path="zipCode" id="zipCode" />
+                    Kod pocztowy <form:input path="zipCode" id="zipCode" /><form:errors path="zipCode"/>
                   </label>
                 </div>
               </div>
@@ -113,17 +117,17 @@
               <div class="form-section--column">
                 <h4>Termin odbioru</h4>
                 <div class="form-group form-group--inline">
-                  <label> Data <form:input type="date" path="pickUpDate" id="date"/> </label>
+                  <label> Data <form:input type="date" path="pickUpDate" id="date"/> <form:errors path="pickUpDate"/> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
-                  <label> Godzina <form:input type="time" path="pickUpTime" id="time"/> </label>
+                  <label> Godzina <form:input type="time" path="pickUpTime" id="time"/> <form:errors path="pickUpTime"/> </label>
                 </div>
 
                 <div class="form-group form-group--inline">
                   <label>
                     Uwagi dla kuriera
-                    <form:textarea path="pickUpComment" id="comment"/>
+                    <form:textarea path="pickUpComment" id="comment"/><form:errors path="pickUpComment"/>
                   </label>
                 </div>
               </div>
