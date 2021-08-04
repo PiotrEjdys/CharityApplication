@@ -29,18 +29,9 @@
           <!-- STEP 1: class .active is switching steps -->
           <div data-step="1" class="active">
             <h3>Zaznacz co chcesz oddać:</h3>
-<%--            <div class="form-group form-group--checkbox">--%>
-<%--              <label>--%>
-<%--              <span class="checkbox"></span>--%>
-            <p style="font-size: large"> <form:checkboxes   path="categories" items="${categories}" itemLabel="name"
+            <p style="font-size: large;line-height: 40px"> <form:checkboxes   path="categories" items="${categories}" itemLabel="name"
                                                             itemValue="id" id="category" delimiter="<br/>"/></p><br>
             <strong style="font-size: large"><form:errors path="categories"/> </strong>
-<%--                <span class="checkbox"></span>--%>
-<%--                <span class="description"--%>
-<%--                  >ubrania, które nadają się do ponownego użycia</span--%>
-<%--                >--%>
-<%--              </label>--%>
-<%--            </div>--%>
             <div class="form-group form-group--buttons">
               <button type="button" class="btn next-step">Dalej</button>
             </div>
@@ -69,21 +60,9 @@
           <div data-step="3">
             <h3>Wybierz organizacje, której chcesz pomóc:</h3>
 
-<%--            <div class="form-group form-group--checkbox">--%>
-<%--              <label>--%>
-<%--                <input type="radio" name="organization" value="old" />--%>
-<%--                <span class="checkbox radio"></span>--%>
-<%--                <span class="description">--%>
-<%--                  <div class="title">Fundacja “Bez domu”</div>--%>
-<%--                  <div class="subtitle">--%>
-<%--                    Cel i misja: Pomoc dla osób nie posiadających miejsca--%>
-<%--                    zamieszkania--%>
-<%--                  </div>--%>
-            <p style="font-size: large"><form:radiobuttons path="institution" items="${institutions}" itemLabel="name" itemValue="id" delimiter="<br/>"/></p> <br>
+            <p style="font-size: large;line-height: 40px"><form:radiobuttons path="institution" items="${institutions}" itemLabel="name" itemValue="id" delimiter="<br/>"/></p> <br>
             <strong style="font-size: large"><form:errors path="institution"/></strong>
-<%--                </span>--%>
-<%--              </label>--%>
-<%--            </div>--%>
+
 
             <div class="form-group form-group--buttons">
               <button type="button" class="btn prev-step">Wstecz</button>

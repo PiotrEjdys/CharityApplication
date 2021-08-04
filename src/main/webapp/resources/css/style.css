@@ -1841,6 +1841,7 @@ input[type="checkbox"] {
     appearance: none;
     background-color: white;
     border: 1px solid grey;
+    margin-bottom: -8px;
 }
 
 input[type="checkbox"]:checked {
@@ -1857,6 +1858,7 @@ input[type="radio"] {
     background-color: white;
     border: 1px solid grey;
     border-radius: 50%;
+    margin-bottom: -8px;
 
 }
 
