@@ -32,8 +32,8 @@
 <%--            <div class="form-group form-group--checkbox">--%>
 <%--              <label>--%>
 <%--              <span class="checkbox"></span>--%>
-                <form:checkboxes   path="categories"
-                                 items="${categories}" itemLabel="name" itemValue="id" id="category"/><br>
+            <p style="font-size: large"> <form:checkboxes   path="categories" items="${categories}" itemLabel="name"
+                                                            itemValue="id" id="category" delimiter="<br/>"/></p><br>
             <strong style="font-size: large"><form:errors path="categories"/> </strong>
 <%--                <span class="checkbox"></span>--%>
 <%--                <span class="description"--%>
@@ -79,7 +79,7 @@
 <%--                    Cel i misja: Pomoc dla osób nie posiadających miejsca--%>
 <%--                    zamieszkania--%>
 <%--                  </div>--%>
-                  <form:radiobuttons path="institution" items="${institutions}" itemLabel="name" itemValue="id"/> <br>
+            <p style="font-size: large"><form:radiobuttons path="institution" items="${institutions}" itemLabel="name" itemValue="id" delimiter="<br/>"/></p> <br>
             <strong style="font-size: large"><form:errors path="institution"/></strong>
 <%--                </span>--%>
 <%--              </label>--%>
