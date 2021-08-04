@@ -21,7 +21,7 @@ public class HomeController {
         this.donationRepository = donationRepository;
     }
 
-    @RequestMapping("")
+    @RequestMapping("/")
     public String homeAction(Model model) {
         List<Institution> institutions = institutionRepository.getAllInstitutions();
         Integer numberOfBags = donationRepository.getNumberOfBags();
