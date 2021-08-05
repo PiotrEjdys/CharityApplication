@@ -7,3 +7,5 @@ INSERT INTO categories(name) VALUE ('ubrania, do wyrzucenia');
 INSERT INTO categories(name) VALUE ('zabawki');
 INSERT INTO categories(name) VALUE ('książki');
 INSERT INTO categories(name) VALUE ('inne');
+INSERT INTO `role`(`id`,`name`) VALUES (NULL,'ROLE_USER');
+INSERT INTO `role`(`id`,`name`) VALUES (NULL,'ROLE_ADMIN');
