@@ -1,16 +1,17 @@
-package pl.coderslab.charity.repository;
+package pl.coderslab.charity.service.impl;
 
 import org.springframework.stereotype.Service;
 import pl.coderslab.charity.model.Donation;
-import pl.coderslab.charity.service.DonationService;
+import pl.coderslab.charity.repository.DonationRepository;
+import pl.coderslab.charity.service.IDonationService;
 
 import java.util.List;
 @Service
-public class JpaDonationRepository implements DonationService {
+public class DonationServiceImpl implements IDonationService {
 
     private final DonationRepository repository;
 
-    public JpaDonationRepository(DonationRepository repository) {
+    public DonationServiceImpl(DonationRepository repository) {
         this.repository = repository;
     }
 

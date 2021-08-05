@@ -4,8 +4,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import pl.coderslab.charity.model.Institution;
-import pl.coderslab.charity.repository.JpaDonationRepository;
-import pl.coderslab.charity.repository.JpaInstitutionRepository;
+import pl.coderslab.charity.service.impl.DonationServiceImpl;
+import pl.coderslab.charity.service.impl.InstitutionServiceImpl;
 
 import java.util.List;
 
@@ -13,10 +13,10 @@ import java.util.List;
 @Controller
 public class HomeController {
 
-    private final JpaInstitutionRepository institutionRepository;
-    private final JpaDonationRepository donationRepository;
+    private final InstitutionServiceImpl institutionRepository;
+    private final DonationServiceImpl donationRepository;
 
-    public HomeController(JpaInstitutionRepository institutionRepository, JpaDonationRepository donationRepository) {
+    public HomeController(InstitutionServiceImpl institutionRepository, DonationServiceImpl donationRepository) {
         this.institutionRepository = institutionRepository;
         this.donationRepository = donationRepository;
     }

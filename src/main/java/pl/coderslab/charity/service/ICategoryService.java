@@ -6,7 +6,7 @@ import pl.coderslab.charity.model.Category;
 import java.util.List;
 
 
-public interface CategoryService {
+public interface ICategoryService {
     List<Category> getAllCategories();
 
     Category getCategoryById(long id);

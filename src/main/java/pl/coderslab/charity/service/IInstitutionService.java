@@ -6,7 +6,7 @@ import pl.coderslab.charity.model.Institution;
 import java.util.List;
 
 
-public interface InstitutionService {
+public interface IInstitutionService {
     List<Institution> getAllInstitutions();
 
     Institution getInstitutionById(long id);

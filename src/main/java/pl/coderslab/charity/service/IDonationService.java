@@ -7,7 +7,7 @@ import pl.coderslab.charity.model.Donation;
 import java.util.List;
 
 
-public interface DonationService {
+public interface IDonationService {
     List<Donation> getAllDonations();
 
     Donation getDonationById(long id);

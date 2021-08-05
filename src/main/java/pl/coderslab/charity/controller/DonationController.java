@@ -8,20 +8,20 @@ import org.springframework.web.bind.annotation.PostMapping;
 import pl.coderslab.charity.model.Category;
 import pl.coderslab.charity.model.Donation;
 import pl.coderslab.charity.model.Institution;
-import pl.coderslab.charity.repository.JpaCategoryRepository;
-import pl.coderslab.charity.repository.JpaDonationRepository;
-import pl.coderslab.charity.repository.JpaInstitutionRepository;
+import pl.coderslab.charity.service.impl.CategoryServiceImpl;
+import pl.coderslab.charity.service.impl.DonationServiceImpl;
+import pl.coderslab.charity.service.impl.InstitutionServiceImpl;
 
 import javax.validation.Valid;
 import java.util.List;
 
 @Controller
 public class DonationController {
-    private final JpaCategoryRepository categoryRepository;
-    private final JpaInstitutionRepository institutionRepository;
-    private final JpaDonationRepository donationRepository;
+    private final CategoryServiceImpl categoryRepository;
+    private final InstitutionServiceImpl institutionRepository;
+    private final DonationServiceImpl donationRepository;
 
-    public DonationController(JpaCategoryRepository categoryRepository, JpaInstitutionRepository institutionRepository, JpaDonationRepository donationRepository) {
+    public DonationController(CategoryServiceImpl categoryRepository, InstitutionServiceImpl institutionRepository, DonationServiceImpl donationRepository) {
         this.categoryRepository = categoryRepository;
         this.institutionRepository = institutionRepository;
         this.donationRepository = donationRepository;
