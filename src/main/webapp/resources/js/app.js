@@ -165,11 +165,11 @@ document.addEventListener("DOMContentLoaded", function () {
             this.$step.parentElement.hidden = this.currentStep >= 5;
 
             // TODO: get data from inputs and show them in summary
-            $(function() {
-                $('#my_form').change(function(){
+            $(function () {
+                $('#my_form').change(function () {
 
                     let val = [];
-                    $("input[name='categories']:checked + label").each(function(i){
+                    $("input[name='categories']:checked + label").each(function (i) {
                         val[i] = " " + $(this).text();
                     });
 
@@ -182,13 +182,13 @@ document.addEventListener("DOMContentLoaded", function () {
                     let comment = $("#comment").val();
                     let institution = $("input[name='institution']:checked + label").text();
 
-                    $('#zip').html( zip );
-                    $('#qt').html( quantity );
-                    $('#st').html( street );
-                    $('#ct').html( city );
-                    $('#dt').html( date );
-                    $('#tm').html( time );
-                    $('#cmt').html( comment );
+                    $('#zip').html(zip);
+                    $('#qt').html(quantity);
+                    $('#st').html(street);
+                    $('#ct').html(city);
+                    $('#dt').html(date);
+                    $('#tm').html(time);
+                    $('#cmt').html(comment);
                     $('#inst').html(institution);
 
                 });

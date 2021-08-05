@@ -4,18 +4,18 @@
 <section id="stats" class="stats">
     <div class="container container--85">
         <div class="stats--item">
-<%--            <c:if test="${totalBags != 0}">--%>
+            <%--            <c:if test="${totalBags != 0}">--%>
             <em>${totalBags}</em>
-<%--            </c:if>--%>
+            <%--            </c:if>--%>
             <h3>Oddanych worków</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
                 tempora!</p>
         </div>
 
         <div class="stats--item">
-<%--            <c:if test="${totalDonations != 0}">--%>
+            <%--            <c:if test="${totalDonations != 0}">--%>
             <em>${totalDonations}</em>
-<%--            </c:if>--%>
+            <%--            </c:if>--%>
             <h3>Przekazanych darów</h3>
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
                 quam.</p>
@@ -78,7 +78,7 @@
                 <li>
                     <div class="col">
                         <div class="title">"<c:out value="${institution.name}"/>"</div>
-                        <div class="subtitle"><c:out value="${institution.description}"/> </div>
+                        <div class="subtitle"><c:out value="${institution.description}"/></div>
                     </div>
 
                     <div class="col">

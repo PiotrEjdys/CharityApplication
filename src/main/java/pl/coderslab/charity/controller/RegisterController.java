@@ -14,20 +14,21 @@ import javax.validation.Valid;
 public class RegisterController {
 
     private final UserService userService;
+
     public RegisterController(UserService userService) {
         this.userService = userService;
     }
 
     @GetMapping("/register")
-    public String getRegistrationForm(User user){
+    public String getRegistrationForm(User user) {
         return "register";
     }
 
     @PostMapping("/register")
     public String postRegistrationForm(@Valid User user, BindingResult result, @RequestParam String password2) {
-        if (result.hasErrors() || !user.getPassword().equals(password2)){
+        if (result.hasErrors() || !user.getPassword().equals(password2)) {
             return "register";
-        }else{
+        } else {
             userService.saveUser(user);
             return "redirect:/login";
         }

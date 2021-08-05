@@ -6,6 +6,7 @@ import pl.coderslab.charity.repository.DonationRepository;
 import pl.coderslab.charity.service.IDonationService;
 
 import java.util.List;
+
 @Service
 public class DonationServiceImpl implements IDonationService {
 

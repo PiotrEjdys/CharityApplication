@@ -6,6 +6,7 @@ import pl.coderslab.charity.repository.InstitutionRepository;
 import pl.coderslab.charity.service.IInstitutionService;
 
 import java.util.List;
+
 @Service
 public class InstitutionServiceImpl implements IInstitutionService {
 

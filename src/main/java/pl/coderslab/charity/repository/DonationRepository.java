@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 import pl.coderslab.charity.model.Donation;
 
 
-public interface DonationRepository extends JpaRepository<Donation,Long> {
+public interface DonationRepository extends JpaRepository<Donation, Long> {
 
     @Query(value = "SELECT d FROM Donation d where d.id=?1")
     Donation getDonationById(long id);

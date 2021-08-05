@@ -6,6 +6,7 @@ import pl.coderslab.charity.repository.CategoryRepository;
 import pl.coderslab.charity.service.ICategoryService;
 
 import java.util.List;
+
 @Service
 public class CategoryServiceImpl implements ICategoryService {
 

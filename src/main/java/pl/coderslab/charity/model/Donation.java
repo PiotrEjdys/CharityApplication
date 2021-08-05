@@ -7,7 +7,6 @@ import javax.persistence.*;
 import javax.validation.constraints.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 
 @Getter
@@ -28,7 +27,7 @@ public class Donation {
     private Integer quantity;
     @ManyToMany
     @JoinTable(name = "categories_donations")
-    @Size(min = 1,message = "wybierz przynajmniej jedną kategorię")
+    @Size(min = 1, message = "wybierz przynajmniej jedną kategorię")
     private List<Category> categories;
     @OneToOne
     @JoinColumn(name = "institution_id")
@@ -39,7 +38,7 @@ public class Donation {
     @NotBlank(message = "Podaj miasto")
     private String city;
     @NotBlank(message = "Podaj kod pocztowy")
-    @Pattern(regexp = "\\d{2}\\-\\d{3}",message = "format XX-XXX")
+    @Pattern(regexp = "\\d{2}\\-\\d{3}", message = "format XX-XXX")
     private String zipCode;
 
     @Future(message = "podaj datę w przyszłości")

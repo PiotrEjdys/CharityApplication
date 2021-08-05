@@ -28,28 +28,31 @@ public class DonationController {
     }
 
     @GetMapping("/form")
-    public String getForm(Donation donation){
+    public String getForm(Donation donation) {
         return "form";
     }
+
     @PostMapping("/form")
-    public String postForm(@Valid Donation donation, BindingResult result){
-        if (result.hasErrors()){
+    public String postForm(@Valid Donation donation, BindingResult result) {
+        if (result.hasErrors()) {
             return "form";
         }
         donationRepository.addDonation(donation);
         return "redirect:/formConfirmation";
     }
+
     @GetMapping("/formConfirmation")
-    public String getFormConfirm(){
+    public String getFormConfirm() {
         return "form-confirmation";
     }
 
     @ModelAttribute("categories")
-    List<Category> getAllCategories(){
+    List<Category> getAllCategories() {
         return categoryRepository.getAllCategories();
     }
+
     @ModelAttribute("institutions")
-    List<Institution> getAllInstitutions(){
+    List<Institution> getAllInstitutions() {
         return institutionRepository.getAllInstitutions();
     }
 }

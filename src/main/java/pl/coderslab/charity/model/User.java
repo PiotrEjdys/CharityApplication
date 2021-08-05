@@ -24,7 +24,7 @@ public class User {
     @Email(message = "niepoprawny adres eamil")
     private String username;
     @NotEmpty(message = "podaj hasło")
-    @Size(min = 8,message = "hasło powinno zawierać conajmniej 8 znaków")
+    @Size(min = 8, message = "hasło powinno zawierać conajmniej 8 znaków")
     private String password;
     private int enabled;
     @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
