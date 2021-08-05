@@ -21,7 +21,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .antMatchers("/").permitAll()
                 .antMatchers("/form").authenticated()
                 .and().formLogin()
-                .loginPage("/login").defaultSuccessUrl("/").permitAll();
+                .loginPage("/login").defaultSuccessUrl("/").permitAll()
+                .and().logout().logoutSuccessUrl("/")
+                .permitAll();;
     }
     @Bean
     public BCryptPasswordEncoder passwordEncoder() {
