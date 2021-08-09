@@ -38,7 +38,7 @@ public class Donation {
     @NotBlank(message = "Podaj miasto")
     private String city;
     @NotBlank(message = "Podaj kod pocztowy")
-    @Pattern(regexp = "\\d{2}\\-\\d{3}", message = "format XX-XXX")
+    @Pattern(regexp = "\\d{2}\\-\\d{3}", message = "format kodu pocztowego XX-XXX")
     private String zipCode;
 
     @Future(message = "podaj datę w przyszłości")

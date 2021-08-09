@@ -6,4 +6,8 @@ public interface UserService {
     User findByUserName(String name);
 
     void saveUser(User user);
+
+    User findUserByToken(String token);
+
+    void updateUser(User user);
 }
