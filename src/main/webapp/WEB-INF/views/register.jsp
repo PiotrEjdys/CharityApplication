@@ -45,5 +45,6 @@
             <button class="btn" type="submit">Załóż konto</button>
         </div>
     </form:form>
+    <h3>Po rejestracji na podane konto email zostanie wysłana wiadomość weryfikacyjna.</h3>
 </section>
 <jsp:include page="footer.jsp"/>

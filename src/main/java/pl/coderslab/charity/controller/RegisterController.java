@@ -51,15 +51,4 @@ public class RegisterController {
         return "redirect:/login";
 
     }
-//    @PostMapping("/register/{token}")
-//    public String confirmRegistration(@PathVariable String token){
-//        User user = userService.findUserByToken(token);
-//        user.setToken(null);
-//        user.setEnabled(true);
-//        userService.updateUser(user);
-//
-//        return "redirect:/login";
-//    }
-
-
 }
