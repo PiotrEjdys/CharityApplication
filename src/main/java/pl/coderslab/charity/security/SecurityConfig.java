@@ -22,7 +22,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
                 .loginPage("/login").defaultSuccessUrl("/").permitAll()
                 .and().logout().invalidateHttpSession(true)
                 .clearAuthentication(true).logoutSuccessUrl("/")
-                .permitAll();
+                .permitAll().and().cors().and().csrf().disable();;
         ;
     }
 

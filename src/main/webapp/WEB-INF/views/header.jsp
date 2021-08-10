@@ -3,7 +3,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
-<fmt:setLocale value="pl" />
+<fmt:setLocale value="${sessionScope.language}" />
 <fmt:setBundle basename="messages"/>
 <html lang="pl">
 <head>
@@ -35,10 +35,10 @@
             </ul>
         </sec:authorize>
         <ul>
-            <li><form method="post" action="/">
+            <li><form method="post">
                <select name="language">
-                   <option><fmt:message key="label.plLang"/></option>
-                   <option><fmt:message key="label.enLang"/></option>
+                   <option value="pl"><fmt:message key="label.plLang"/></option>
+                   <option value="en"><fmt:message key="label.enLang"/></option>
                </select>
                 <input type="submit" value="click">
             </form> </li>
