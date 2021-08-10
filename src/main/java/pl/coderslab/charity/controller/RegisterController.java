@@ -28,7 +28,7 @@ public class RegisterController {
 
     @PostMapping("/register")
     public String postRegistrationForm(@Valid User user, BindingResult result, @RequestParam String password2) {
-        if (result.hasErrors() || !user.getPassword().equals(password2)) {
+        if (result.hasErrors() || !user.getPassword().equals(password2) || userService.findByUserName(user.getUsername()) !=null) {
             return "register";
         } else {
             String token = RandomToken.generateRandom();
