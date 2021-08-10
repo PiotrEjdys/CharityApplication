@@ -35,13 +35,21 @@
             </ul>
         </sec:authorize>
         <ul>
+<%--            <li><form method="post">--%>
+<%--               <select id="lang" name="language">--%>
+<%--                   <option value="pl"><fmt:message key="label.plLang"/></option>--%>
+<%--                   <option value="en"><fmt:message key="label.enLang"/></option>--%>
+<%--               </select>--%>
+<%--                <input type="submit" value="click">--%>
+<%--            </form> </li>--%>
             <li><form method="post">
-               <select name="language">
-                   <option value="pl"><fmt:message key="label.plLang"/></option>
-                   <option value="en"><fmt:message key="label.enLang"/></option>
-               </select>
-                <input type="submit" value="click">
+            <select name="language" onselect="this.form.submit()"onchange="this.form.submit()">
+                <option></option>
+                <option value="pl"><fmt:message key="label.plLang"/></option>
+                <option value="en"><fmt:message key="label.enLang"/></option>
+            </select>
             </form> </li>
+            ${sessionScope.language}
             <li><a href="<c:url value="/"/>" class="btn btn--without-border active">Start</a></li>
             <li><a href="<c:url value="/#steps"/>" class="btn btn--without-border"><fmt:message key="label.whatsAbout"/></a></li>
             <li><a href="<c:url value="/#about-us"/>" class="btn btn--without-border"><fmt:message key="label.aboutUs"/></a></li>

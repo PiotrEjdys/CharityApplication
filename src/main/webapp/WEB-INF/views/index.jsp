@@ -4,7 +4,7 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <jsp:include page="header.jsp"/>
-<fmt:setLocale value="${sessionScope.language}" />
+<fmt:setLocale  value="${sessionScope.language}" />
 <fmt:setBundle basename="messages"/>
 <section id="stats" class="stats">
     <div class="container container--85">
