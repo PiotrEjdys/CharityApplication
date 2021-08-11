@@ -49,7 +49,8 @@
                 <option value="en"><fmt:message key="label.enLang"/></option>
             </select>
             </form> </li>
-            ${sessionScope.language}
+    <c:out value="${sessionScope.language}" default="pl"/>
+
             <li><a href="<c:url value="/"/>" class="btn btn--without-border active">Start</a></li>
             <li><a href="<c:url value="/#steps"/>" class="btn btn--without-border"><fmt:message key="label.whatsAbout"/></a></li>
             <li><a href="<c:url value="/#about-us"/>" class="btn btn--without-border"><fmt:message key="label.aboutUs"/></a></li>

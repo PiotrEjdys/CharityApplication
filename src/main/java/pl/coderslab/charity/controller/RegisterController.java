@@ -10,6 +10,7 @@ import pl.coderslab.charity.service.UserService;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.time.LocalDateTime;
 
 @Controller
 public class RegisterController {
@@ -56,11 +57,13 @@ public class RegisterController {
     @RequestMapping(value = "/register/{token}",method = {RequestMethod.GET,RequestMethod.POST})
     public String confirmationGet(@PathVariable String token){
         User user = userService.findUserByToken(token);
-        user.setToken(null);
-        user.setEnabled(true);
+        if (LocalDateTime.now().plusHours(2).isAfter(user.getLocalDateTime().plusHours(24))){
+            user.setToken(null);
+        }else{
+            user.setToken(null);
+            user.setEnabled(true);
+        }
         userService.updateUser(user);
-
         return "redirect:/login";
-
     }
 }

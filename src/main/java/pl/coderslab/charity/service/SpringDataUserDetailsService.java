@@ -25,7 +25,7 @@ public class SpringDataUserDetailsService implements UserDetailsService {
     public UserDetails loadUserByUsername(String username) {
         User user = userService.findByUserName(username);
 
-        if (user == null || !user.isEnabled()|| (!user.isEnabled() && LocalDateTime.now().plusHours(2).isAfter(user.getLocalDateTime().plusHours(24)))) {
+        if (user == null || !user.isEnabled()) {
             throw new UsernameNotFoundException(username);
         }
         Set<GrantedAuthority> grantedAuthorities = new HashSet<>();
